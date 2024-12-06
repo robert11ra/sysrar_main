@@ -46,6 +46,7 @@ session_start();
             </script>';
     }
     ?>
+    <p>sexo</p>
     <div class="header finisher-header" style="width: 100%; height: 100vh;">
         <div class="container d-flex flex-column justify-content-center" style="height: 100vh;">
             <div class="row align-items-center bg-body-tertiary shadow-lg rounded-3 p-3">
