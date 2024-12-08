@@ -636,24 +636,6 @@ select {
   padding: 0 1rem 0 1rem;
 }
 
-/* .card2 {
-  color: white;
-  background-color: #363636;
-  border: 2px solid rgb(170, 170, 170);
-  border-style: dotted;
-  border-radius: 0.25rem;
-  transition: 0.3s ease-in-out;
-} */
-
-/* .card2:hover {
-  transition: 0.3s ease-in-out;
-  background-color: #1d1d1d;
-}
-
-.card2 i {
-  color: #e2e2e2;
-  font-size: 2rem;
-} */
 
 .btn-card {
   height: 2.3rem;

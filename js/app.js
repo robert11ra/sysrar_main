@@ -1,8 +1,249 @@
 $(document).ready(function () {
   //!SPANISH
-  const spanish = "";
-
-
+  const spanish = {
+    processing: "Procesando...",
+    lengthMenu: "Mostrar _MENU_ registros",
+    zeroRecords: "No se encontraron resultados",
+    emptyTable: "Ningún dato disponible en esta tabla",
+    infoEmpty: "Mostrando registros del 0 al 0 de un total de 0 registros",
+    infoFiltered: "(filtrado de un total de _MAX_ registros)",
+    search: "Buscar:",
+    loadingRecords: "Cargando...",
+    paginate: {
+      first: "Primero",
+      last: "Último",
+      next: "Siguiente",
+      previous: "Anterior",
+    },
+    aria: {
+      sortAscending: ": Activar para ordenar la columna de manera ascendente",
+      sortDescending: ": Activar para ordenar la columna de manera descendente",
+    },
+    buttons: {
+      copy: "Copiar",
+      colvis: "Visibilidad",
+      collection: "Colección",
+      colvisRestore: "Restaurar visibilidad",
+      copyKeys:
+        "Presione ctrl o u2318 + C para copiar los datos de la tabla al portapapeles del sistema. <br /> <br /> Para cancelar, haga clic en este mensaje o presione escape.",
+      copySuccess: {
+        1: "Copiada 1 fila al portapapeles",
+        _: "Copiadas %ds fila al portapapeles",
+      },
+      copyTitle: "Copiar al portapapeles",
+      csv: "CSV",
+      excel: "Excel",
+      pageLength: {
+        "-1": "Mostrar todas las filas",
+        _: "Mostrar %d filas",
+      },
+      pdf: "PDF",
+      print: "Imprimir",
+      renameState: "Cambiar nombre",
+      updateState: "Actualizar",
+      createState: "Crear Estado",
+      removeAllStates: "Remover Estados",
+      removeState: "Remover",
+      savedStates: "Estados Guardados",
+      stateRestore: "Estado %d",
+    },
+    autoFill: {
+      cancel: "Cancelar",
+      fill: "Rellene todas las celdas con <i>%d</i>",
+      fillHorizontal: "Rellenar celdas horizontalmente",
+      fillVertical: "Rellenar celdas verticalmente",
+    },
+    decimal: ",",
+    searchBuilder: {
+      add: "Añadir condición",
+      button: {
+        0: "Constructor de búsqueda",
+        _: "Constructor de búsqueda (%d)",
+      },
+      clearAll: "Borrar todo",
+      condition: "Condición",
+      conditions: {
+        date: {
+          before: "Antes",
+          between: "Entre",
+          empty: "Vacío",
+          equals: "Igual a",
+          notBetween: "No entre",
+          not: "Diferente de",
+          after: "Después",
+          notEmpty: "No Vacío",
+        },
+        number: {
+          between: "Entre",
+          equals: "Igual a",
+          gt: "Mayor a",
+          gte: "Mayor o igual a",
+          lt: "Menor que",
+          lte: "Menor o igual que",
+          notBetween: "No entre",
+          notEmpty: "No vacío",
+          not: "Diferente de",
+          empty: "Vacío",
+        },
+        string: {
+          contains: "Contiene",
+          empty: "Vacío",
+          endsWith: "Termina en",
+          equals: "Igual a",
+          startsWith: "Empieza con",
+          not: "Diferente de",
+          notContains: "No Contiene",
+          notStartsWith: "No empieza con",
+          notEndsWith: "No termina con",
+          notEmpty: "No Vacío",
+        },
+        array: {
+          not: "Diferente de",
+          equals: "Igual",
+          empty: "Vacío",
+          contains: "Contiene",
+          notEmpty: "No Vacío",
+          without: "Sin",
+        },
+      },
+      data: "Data",
+      deleteTitle: "Eliminar regla de filtrado",
+      leftTitle: "Criterios anulados",
+      logicAnd: "Y",
+      logicOr: "O",
+      rightTitle: "Criterios de sangría",
+      title: {
+        0: "Constructor de búsqueda",
+        _: "Constructor de búsqueda (%d)",
+      },
+      value: "Valor",
+    },
+    searchPanes: {
+      clearMessage: "Borrar todo",
+      collapse: {
+        0: "Paneles de búsqueda",
+        _: "Paneles de búsqueda (%d)",
+      },
+      count: "{total}",
+      countFiltered: "{shown} ({total})",
+      emptyPanes: "Sin paneles de búsqueda",
+      loadMessage: "Cargando paneles de búsqueda",
+      title: "Filtros Activos - %d",
+      showMessage: "Mostrar Todo",
+      collapseMessage: "Colapsar Todo",
+    },
+    select: {
+      cells: {
+        1: "1 celda seleccionada",
+        _: "%d celdas seleccionadas",
+      },
+      columns: {
+        1: "1 columna seleccionada",
+        _: "%d columnas seleccionadas",
+      },
+      rows: {
+        1: "1 fila seleccionada",
+        _: "%d filas seleccionadas",
+      },
+    },
+    thousands: ".",
+    datetime: {
+      previous: "Anterior",
+      hours: "Horas",
+      minutes: "Minutos",
+      seconds: "Segundos",
+      unknown: "-",
+      amPm: ["AM", "PM"],
+      months: {
+        0: "Enero",
+        1: "Febrero",
+        2: "Marzo",
+        3: "Abril",
+        4: "Mayo",
+        5: "Junio",
+        6: "Julio",
+        7: "Agosto",
+        8: "Septiembre",
+        9: "Octubre",
+        10: "Noviembre",
+        11: "Diciembre",
+      },
+      weekdays: {
+        0: "Dom",
+        1: "Lun",
+        2: "Mar",
+        3: "Mié",
+        4: "Jue",
+        5: "Vie",
+        6: "Sáb",
+      },
+      next: "Próximo",
+    },
+    editor: {
+      close: "Cerrar",
+      create: {
+        button: "Nuevo",
+        title: "Crear Nuevo Registro",
+        submit: "Crear",
+      },
+      edit: {
+        button: "Editar",
+        title: "Editar Registro",
+        submit: "Actualizar",
+      },
+      remove: {
+        button: "Eliminar",
+        title: "Eliminar Registro",
+        submit: "Eliminar",
+        confirm: {
+          1: "¿Está seguro de que desea eliminar 1 fila?",
+          _: "¿Está seguro de que desea eliminar %d filas?",
+        },
+      },
+      error: {
+        system:
+          'Ha ocurrido un error en el sistema (<a target="\\" rel="\\ nofollow" href="\\">Más información&lt;\\/a&gt;).</a>',
+      },
+      multi: {
+        title: "Múltiples Valores",
+        restore: "Deshacer Cambios",
+        noMulti:
+          "Este registro puede ser editado individualmente, pero no como parte de un grupo.",
+        info: "Los elementos seleccionados contienen diferentes valores para este registro. Para editar y establecer todos los elementos de este registro con el mismo valor, haga clic o pulse aquí, de lo contrario conservarán sus valores individuales.",
+      },
+    },
+    info: "Mostrando _START_ a _END_ de _TOTAL_ registros",
+    stateRestore: {
+      creationModal: {
+        button: "Crear",
+        name: "Nombre:",
+        order: "Clasificación",
+        paging: "Paginación",
+        select: "Seleccionar",
+        columns: {
+          search: "Búsqueda de Columna",
+          visible: "Visibilidad de Columna",
+        },
+        title: "Crear Nuevo Estado",
+        toggleLabel: "Incluir:",
+        scroller: "Posición de desplazamiento",
+        search: "Búsqueda",
+        searchBuilder: "Búsqueda avanzada",
+      },
+      removeJoiner: "y",
+      removeSubmit: "Eliminar",
+      renameButton: "Cambiar Nombre",
+      duplicateError: "Ya existe un Estado con este nombre.",
+      emptyStates: "No hay Estados guardados",
+      removeTitle: "Remover Estado",
+      renameTitle: "Cambiar Nombre Estado",
+      emptyError: "El nombre no puede estar vacío.",
+      removeConfirm: "¿Seguro que quiere eliminar %s?",
+      removeError: "Error al eliminar el Estado",
+      renameLabel: "Nuevo nombre para %s:",
+    },
+    infoThousands: ".",
+  };
 
   //Inicio Sesion//
   if ($("#login").length) {
@@ -187,11 +428,13 @@ $(document).ready(function () {
 
   //Funcion para retornar las funciones de los productos
   function accionesProductos(data) {
-    return ("<a id=" +
+    return (
+      "<a id=" +
       data.id +
       ' href="agregar_stock.php?id=' +
       data.id +
-      '" class="agregar-stock btn btn-success me-2 btn_op"><i class="fa-solid fa-plus"></i></a>' + "<a id=" +
+      '" class="agregar-stock btn btn-success me-2 btn_op"><i class="fa-solid fa-plus"></i></a>' +
+      "<a id=" +
       data.id +
       ' href="editar_producto.php?id=' +
       data.id +
@@ -223,24 +466,46 @@ $(document).ready(function () {
 
   //Funcion para retornar las funciones de las facturas
   function accionesFactura(data) {
-
     //CREAR FUNCION PARA PAGAR FACTURA
 
     if (data.id_status == 4) {
-      return ("<button title='Ver PDF' class='ver-factura btn btn-primary me-2' id=" + data.id + "><i class='fa-solid fs-5 fa-eye'></i></button><button title='Imprimir Ticket' class='imprimir-factura btn btn-info me-2' id=" + data.id + "><i class='fa-solid fs-5 fa-ticket'></i></button><button title='Anular Factura' class='anular-factura btn btn-danger btn_op' id=" + data.id + "><i class='fa-solid fs-5 fa-ban'></i></button>");
+      return (
+        "<button title='Ver PDF' class='ver-factura btn btn-primary me-2' id=" +
+        data.id +
+        "><i class='fa-solid fs-5 fa-eye'></i></button><button title='Imprimir Ticket' class='imprimir-factura btn btn-info me-2' id=" +
+        data.id +
+        "><i class='fa-solid fs-5 fa-ticket'></i></button><button title='Anular Factura' class='anular-factura btn btn-danger btn_op' id=" +
+        data.id +
+        "><i class='fa-solid fs-5 fa-ban'></i></button>"
+      );
     } else if (data.id_status == 5) {
-      return ("<button title='Ver PDF' class='ver-factura btn btn-primary me-2' id=" + data.id + "><i class='fa-solid fs-5 fa-eye'></i></button><button title='Imprimir Ticket' class='imprimir-factura btn btn-info me-2' id=" + data.id + "><i class='fa-solid fs-5 fa-ticket'></i></button><button title='Pagar Factura' class='pagar-factura btn btn-success btn_op' id=" + data.id + "><i class='fa-solid fa-money-bill-wave'></i></button>");
+      return (
+        "<button title='Ver PDF' class='ver-factura btn btn-primary me-2' id=" +
+        data.id +
+        "><i class='fa-solid fs-5 fa-eye'></i></button><button title='Imprimir Ticket' class='imprimir-factura btn btn-info me-2' id=" +
+        data.id +
+        "><i class='fa-solid fs-5 fa-ticket'></i></button><button title='Pagar Factura' class='pagar-factura btn btn-success btn_op' id=" +
+        data.id +
+        "><i class='fa-solid fa-money-bill-wave'></i></button>"
+      );
     } else {
-      return ("<button title='Ver PDF' class='ver-factura btn btn-primary me-2' id=" + data.id + "><i class='fa-solid fs-5 fa-eye'></i></button><button title='Imprimir Ticket' class='imprimir-factura btn btn-info me-2' id=" + data.id + "><i class='fa-solid fs-5 fa-ticket'></i></button>");
+      return (
+        "<button title='Ver PDF' class='ver-factura btn btn-primary me-2' id=" +
+        data.id +
+        "><i class='fa-solid fs-5 fa-eye'></i></button><button title='Imprimir Ticket' class='imprimir-factura btn btn-info me-2' id=" +
+        data.id +
+        "><i class='fa-solid fs-5 fa-ticket'></i></button>"
+      );
     }
-
   }
 
   //Funcion para retornar las funciones de la nomina
   function accionesNomina(data) {
-
-    return ('<button type="button" class="btn btn-secondary ver-detalles-nomina" data-bs-toggle="modal" id=' + data.id + ' data-bs-target="#staticBackdrop"><i class="fa-solid fa-list-ul"></i></button>');
-
+    return (
+      '<button type="button" class="btn btn-secondary ver-detalles-nomina" data-bs-toggle="modal" id=' +
+      data.id +
+      ' data-bs-target="#staticBackdrop"><i class="fa-solid fa-list-ul"></i></button>'
+    );
   }
 
   function enviarDataPDF(id_factura) {
@@ -269,7 +534,13 @@ $(document).ready(function () {
         configData["config"] = response.configData;
         cashbackData["cashback"] = response.cashbackData;
 
-        generarPDF(clientData, productsData, paymentsData, configData, cashbackData);
+        generarPDF(
+          clientData,
+          productsData,
+          paymentsData,
+          configData,
+          cashbackData
+        );
       },
       error: function (error) {
         // Mostrar una alerta de error si no se puede eliminar el registro
@@ -313,14 +584,14 @@ $(document).ready(function () {
             url,
             "Recibo_" + response.id,
             "left=" +
-            x +
-            ",top=" +
-            y +
-            ",height=" +
-            alto +
-            ",width=" +
-            ancho +
-            ",scrollbar=si,location=no,resizable=si,menubar=no"
+              x +
+              ",top=" +
+              y +
+              ",height=" +
+              alto +
+              ",width=" +
+              ancho +
+              ",scrollbar=si,location=no,resizable=si,menubar=no"
           );
 
           Swal.fire({
@@ -378,7 +649,13 @@ $(document).ready(function () {
         configData["config"] = response.configData;
         cashbackData["cashback"] = response.cashbackData;
 
-        generarTicket(clientData, productsData, paymentsData, configData, cashbackData);
+        generarTicket(
+          clientData,
+          productsData,
+          paymentsData,
+          configData,
+          cashbackData
+        );
       },
       error: function (error) {
         // Mostrar una alerta de error si no se puede eliminar el registro
@@ -516,7 +793,8 @@ $(document).ready(function () {
           function: "obtenerUsuarios",
         },
       },
-      columns: [{
+      columns: [
+        {
           data: "id",
           width: "5px",
         },
@@ -550,20 +828,20 @@ $(document).ready(function () {
         if (data.id_status == 1) {
           $("td:eq(5)", row).html(
             '<span class="badge text-bg-success text-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         } else if (data.id_status == 2) {
           $("td:eq(5)", row).html(
             '<span class="badge text-bg-danger text-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         } else {
           $("td:eq(6)", row).html(
             '<span class="badge text-bg-warning text-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         }
       },
@@ -711,7 +989,9 @@ $(document).ready(function () {
             const user = document.getElementById("user").value.trim();
             const pass = document.getElementById("pass").value.trim();
             const salary = document.getElementById("salary").value.trim();
-            const department = document.getElementById("department").value.trim();
+            const department = document
+              .getElementById("department")
+              .value.trim();
             const id_rol = document.getElementById("select_roles").value.trim();
             const id_status = document
               .getElementById("select_status")
@@ -863,7 +1143,8 @@ $(document).ready(function () {
           function: "obtenerClientes",
         },
       },
-      columns: [{
+      columns: [
+        {
           data: "id",
           width: "5px",
         },
@@ -900,20 +1181,20 @@ $(document).ready(function () {
         if (data.id_status == 1) {
           $("td:eq(7)", row).html(
             '<span class="badge text-bg-success text-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         } else if (data.id_status == 2) {
           $("td:eq(7)", row).html(
             '<span class="badge text-bg-danger text-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         } else {
           $("td:eq(6)", row).html(
             '<span class="badge text-bg-warning text-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         }
       },
@@ -1191,6 +1472,7 @@ $(document).ready(function () {
   if ($("#tabla_producto").length) {
     $("#tabla_producto").DataTable({
       pageLength: 10,
+      autoWidth: false,
       ajax: {
         url: "../../controller/productController.php",
         type: "POST",
@@ -1200,7 +1482,8 @@ $(document).ready(function () {
           function: "obtenerProductos",
         },
       },
-      columns: [{
+      columns: [
+        {
           data: "id",
           width: "5px",
         },
@@ -1239,20 +1522,95 @@ $(document).ready(function () {
         if (data.id_status == 1) {
           $("td:eq(8)", row).html(
             '<span class="badge text-bg-success text-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         } else if (data.id_status == 2) {
           $("td:eq(8)", row).html(
             '<span class="badge text-bg-danger text-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         } else {
           $("td:eq(8)", row).html(
             '<span class="badge text-bg-warning text-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
+          );
+        }
+      },
+      language: spanish,
+      scrollCollapse: true,
+      scrollY: "31rem",
+    });
+  }
+
+  if ($("#tabla_productos_agotados").length) {
+    $("#tabla_productos_agotados").DataTable({
+      pageLength: 10,
+      ajax: {
+        url: "../../controller/productController.php",
+        type: "POST",
+        dataSrc: "",
+        dataType: "json",
+        data: {
+          function: "obtenerProductos",
+        },
+      },
+      columns: [
+        {
+          data: "id",
+          width: "5px",
+        },
+        {
+          data: "name",
+        },
+        {
+          data: "model",
+        },
+        {
+          data: "cost",
+        },
+        {
+          data: "price",
+        },
+        {
+          data: "second_price",
+        },
+        {
+          data: "stock",
+        },
+        {
+          data: "stock_warranty",
+        },
+        {
+          data: "status",
+        },
+        {
+          data: null,
+          render: function (data) {
+            return accionesProductos(data);
+          },
+        },
+      ],
+      createdRow: function (row, data, dataIndex) {
+        if (data.id_status == 1) {
+          $("td:eq(8)", row).html(
+            '<span class="badge text-bg-success text-white">' +
+              data.status +
+              "</span>"
+          );
+        } else if (data.id_status == 2) {
+          $("td:eq(8)", row).html(
+            '<span class="badge text-bg-danger text-white">' +
+              data.status +
+              "</span>"
+          );
+        } else {
+          $("td:eq(8)", row).html(
+            '<span class="badge text-bg-warning text-white">' +
+              data.status +
+              "</span>"
           );
         }
       },
@@ -1576,7 +1934,9 @@ $(document).ready(function () {
             const id = document.getElementById("id").value.trim();
             const new_cost = document.getElementById("new_cost").value.trim();
             const new_price = document.getElementById("new_price").value.trim();
-            const new_second_price = document.getElementById("new_second_price").value.trim();
+            const new_second_price = document
+              .getElementById("new_second_price")
+              .value.trim();
             const new_stock = document.getElementById("new_stock").value.trim();
             const id_user = document.getElementById("id_user").value.trim();
 
@@ -1591,8 +1951,6 @@ $(document).ready(function () {
             };
             agregarStock(JSON.stringify(datos)); // Convertir a JSON antes de enviar
           });
-
-
         },
         error: function (error) {
           // Mostrar mensaje de error con SweetAlert
@@ -1659,27 +2017,33 @@ $(document).ready(function () {
           function: "obtenerProveedores",
         },
       },
-      columns: [{
+      columns: [
+        {
           data: "id",
           width: "5px",
         },
         {
           data: "name",
-        }, {
+        },
+        {
           data: "rif",
-        }, {
+        },
+        {
           data: "phone",
-        }, {
+        },
+        {
           data: "email",
-        }, {
+        },
+        {
           data: "address",
-        }, {
+        },
+        {
           data: "status",
         },
         {
           data: null,
           render: function (data) {
-              return accionesProveedores(data);
+            return accionesProveedores(data);
           },
         },
       ],
@@ -1687,20 +2051,20 @@ $(document).ready(function () {
         if (data.id_status == 1) {
           $("td:eq(6)", row).html(
             '<span class="badge text-bg-success text-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         } else if (data.id_status == 3) {
           $("td:eq(6)", row).html(
             '<span class="badge text-bg-danger text-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         } else {
           $("td:eq(6)", row).html(
             '<span class="badge text-bg-warning black-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         }
       },
@@ -1724,7 +2088,7 @@ $(document).ready(function () {
       const address = document.getElementById("address").value.trim();
       const status = document.getElementById("select_status").value.trim();
       const id_user = document.getElementById("id_user").value.trim();
-      
+
       // ¡Lógica AJAX aquí
       const datos = {
         rif: rif,
@@ -1732,8 +2096,8 @@ $(document).ready(function () {
         email: email,
         phone: phone,
         address: address,
-        status: status, 
-        id_user: id_user
+        status: status,
+        id_user: id_user,
       };
 
       registrarProveedor(JSON.stringify(datos)); // Convertir a JSON antes de enviar
@@ -1810,7 +2174,7 @@ $(document).ready(function () {
           function: "obtenerProveedorById",
         },
         success: function (response) {
-          console.log(response)
+          console.log(response);
           //Asignar los valores del formulario
           $("#id").val(response.id);
           $("#rif").val(response.rif);
@@ -1830,7 +2194,9 @@ $(document).ready(function () {
             const email = document.getElementById("email").value.trim();
             const phone = document.getElementById("phone").value.trim();
             const address = document.getElementById("address").value.trim();
-            const status = document.getElementById("select_status").value.trim();
+            const status = document
+              .getElementById("select_status")
+              .value.trim();
             const id_user = document.getElementById("id_user").value.trim();
 
             // ¡Lógica AJAX aquí
@@ -1842,7 +2208,7 @@ $(document).ready(function () {
               phone: phone,
               address: address,
               status: status,
-              id_user: id_user
+              id_user: id_user,
             };
 
             editarProveedor(JSON.stringify(datos)); // Convertir a JSON antes de enviar
@@ -1968,7 +2334,6 @@ $(document).ready(function () {
 
   //DATATABLE FACTURAS
   if ($("#tabla_facturas").length) {
-
     $("#tabla_facturas").DataTable({
       pageLength: 10,
       ajax: {
@@ -1980,7 +2345,8 @@ $(document).ready(function () {
           function: "obtenerFacturas",
         },
       },
-      columns: [{
+      columns: [
+        {
           data: "id",
           width: "5px",
         },
@@ -2010,27 +2376,25 @@ $(document).ready(function () {
           },
         },
       ],
-      order: [
-        [0, "desc"]
-      ],
+      order: [[0, "desc"]],
       createdRow: function (row, data, dataIndex) {
         if (data.id_status == 4) {
           $("td:eq(4)", row).html(
             '<span class="badge text-bg-success text-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         } else if (data.id_status == 6) {
           $("td:eq(4)", row).html(
             '<span class="badge text-bg-danger text-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         } else {
           $("td:eq(4)", row).html(
             '<span class="badge text-bg-warning text-black">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         }
       },
@@ -2039,8 +2403,6 @@ $(document).ready(function () {
     });
 
     // Controlador de eventos click para el botón de eliminar en DataTable
-
-
 
     // Controlador de eventos click para el botón de ver PDF en DataTable
     $("#tabla_facturas").on("click", ".ver-factura", function () {
@@ -2068,8 +2430,7 @@ $(document).ready(function () {
 
     $("#tabla_facturas").on("click", ".pagar-factura", function () {
       let id_factura = $(this).attr("id");
-      pagar_factura(id_factura)
-
+      pagar_factura(id_factura);
     });
   }
   //FUNCIONES FACTURAS
@@ -2079,10 +2440,10 @@ $(document).ready(function () {
     Swal.fire({
       title: "¿Está seguro de que desea anular este registro?",
       html: "ID: " + id_factura + "<br>" + "No podrá revertir esta acción",
-      text: 'Ingresa el motivo detallado de la anulación:',
-      input: 'textarea',
-      inputLabel: 'Motivo:',
-      inputPlaceholder: 'Escribe aquí el motivo...',
+      text: "Ingresa el motivo detallado de la anulación:",
+      input: "textarea",
+      inputLabel: "Motivo:",
+      inputPlaceholder: "Escribe aquí el motivo...",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#d33",
@@ -2091,19 +2452,18 @@ $(document).ready(function () {
       cancelButtonText: "Cancelar",
       inputValidator: (value) => {
         if (!value) {
-          return 'Por favor, ingresa el motivo.';
+          return "Por favor, ingresa el motivo.";
         } else if (value.length < 10) {
-          return 'El motivo debe tener al menos 10 caracteres.';
+          return "El motivo debe tener al menos 10 caracteres.";
         }
-      }
+      },
     }).then((result) => {
-
       if (result.isConfirmed) {
         const motivo = result.value;
-        console.log(motivo)
+        console.log(motivo);
         const datos = {
           id_factura: id_factura,
-          motivo: motivo
+          motivo: motivo,
         };
         // Hacer una llamada AJAX para eliminar el registro seleccionado
         $.ajax({
@@ -2155,7 +2515,7 @@ $(document).ready(function () {
 
     const datos = {
       id_factura: id_factura,
-    }
+    };
 
     // !Realizar peticion para traer los datos de la factura, si ha pagado algo, cuanto falta por pagar y preparar para enviar metodos a pagar y si hay que dar vuelto
     $.ajax({
@@ -2164,18 +2524,21 @@ $(document).ready(function () {
       type: "POST",
       data: {
         datos: datos,
-        function: "obtenerVueltosFactura"
+        function: "obtenerVueltosFactura",
       },
       success: function (response) {
-        document.body.addEventListener("keyup", e => {
+        document.body.addEventListener("keyup", (e) => {
           const tasa_actual = parseFloat(response.tasa_vuelto);
 
           //Dolares
-          let vuelto_bs_total = parseFloat(e.target.parentElement.getAttribute("data-total_vuelto_bs"));
-          let vuelto_usd_total = parseFloat(e.target.parentElement.getAttribute("data-total_vuelto_usd"));
+          let vuelto_bs_total = parseFloat(
+            e.target.parentElement.getAttribute("data-total_vuelto_bs")
+          );
+          let vuelto_usd_total = parseFloat(
+            e.target.parentElement.getAttribute("data-total_vuelto_usd")
+          );
 
           function calcularVuelto(montoBs, montoUsd) {
-
             const montoBsEnUsd = montoBs / tasa_actual;
             const totalIngresado = montoUsd + montoBsEnUsd;
             const vueltoUsd = vuelto_usd_total - totalIngresado;
@@ -2183,225 +2546,294 @@ $(document).ready(function () {
 
             return {
               vueltoBs,
-              vueltoUsd
+              vueltoUsd,
             };
           }
-          if ([...e.target.classList].includes("cambios") || [...e.target.classList].includes("cambios2")) {
-            const montoBs = isNaN(parseFloat(document.getElementById("swal-input2").value)) ? 0 : parseFloat(document.getElementById("swal-input2").value);
-            const montoUsd = isNaN(parseFloat(document.getElementById("swal-input1").value)) ? 0 : parseFloat(document.getElementById("swal-input1").value);
+          if (
+            [...e.target.classList].includes("cambios") ||
+            [...e.target.classList].includes("cambios2")
+          ) {
+            const montoBs = isNaN(
+              parseFloat(document.getElementById("swal-input2").value)
+            )
+              ? 0
+              : parseFloat(document.getElementById("swal-input2").value);
+            const montoUsd = isNaN(
+              parseFloat(document.getElementById("swal-input1").value)
+            )
+              ? 0
+              : parseFloat(document.getElementById("swal-input1").value);
 
-            const {
-              vueltoBs,
-              vueltoUsd
-            } = calcularVuelto(montoBs, montoUsd);
+            const { vueltoBs, vueltoUsd } = calcularVuelto(montoBs, montoUsd);
 
-            e.target.parentElement.querySelector("span .bs").innerHTML = parseFloat(vueltoBs.toFixed(2));
-            e.target.parentElement.querySelector("span .usd").innerHTML = parseFloat(vueltoUsd.toFixed(2));
+            e.target.parentElement.querySelector("span .bs").innerHTML =
+              parseFloat(vueltoBs.toFixed(2));
+            e.target.parentElement.querySelector("span .usd").innerHTML =
+              parseFloat(vueltoUsd.toFixed(2));
           }
-
-        })
+        });
 
         // Respuesta exitosa - manejar en caso de JSON
-        const selects = ["Efectivo", "Pago Movil", "Tarjeta"].map(tipo_pago => `<option value="${tipo_pago}">${tipo_pago}</option>`).join("")
+        const selects = ["Efectivo", "Pago Movil", "Tarjeta"]
+          .map(
+            (tipo_pago) => `<option value="${tipo_pago}">${tipo_pago}</option>`
+          )
+          .join("");
         const bs = response.pendiente_bs;
         const usd = response.pendiente;
 
-        const consultar_pago = () => Swal.fire({
-          title: "Pagar factura - ID: " + id_factura,
-          html: '<div data-total_vuelto_bs="' + bs + '" data-total_vuelto_usd="' + usd + '"><span>USD: <strong class="usd">' + usd + '</strong> - ' + 'BS: <strong class="bs">' + bs + '</strong><br>' + 'Ingrese montos a pagar</span><br>' +
-            '<input id="swal-input1" class="swal2-input cambios usd" type="number" min="0" step="0.1" placeholder="Cantidad en USD"><hr>' +
-            '<input id="swal-input2" class="swal2-input cambios2 bs" type="number" min="0" step="0.1" placeholder="Cantidad en BS"><select id="swal2-select" style="padding: 0 3.95rem" class="swal2-select swal2-input">' + selects + '</select></div>',
-          icon: "info",
-          showCancelButton: true,
-          confirmButtonColor: "#61a146",
-          cancelButtonColor: "#da2828",
-          confirmButtonText: "Confirmar",
-          cancelButtonText: "Cancelar",
-        }).then((result) => {
+        const consultar_pago = () =>
+          Swal.fire({
+            title: "Pagar factura - ID: " + id_factura,
+            html:
+              '<div data-total_vuelto_bs="' +
+              bs +
+              '" data-total_vuelto_usd="' +
+              usd +
+              '"><span>USD: <strong class="usd">' +
+              usd +
+              "</strong> - " +
+              'BS: <strong class="bs">' +
+              bs +
+              "</strong><br>" +
+              "Ingrese montos a pagar</span><br>" +
+              '<input id="swal-input1" class="swal2-input cambios usd" type="number" min="0" step="0.1" placeholder="Cantidad en USD"><hr>' +
+              '<input id="swal-input2" class="swal2-input cambios2 bs" type="number" min="0" step="0.1" placeholder="Cantidad en BS"><select id="swal2-select" style="padding: 0 3.95rem" class="swal2-select swal2-input">' +
+              selects +
+              "</select></div>",
+            icon: "info",
+            showCancelButton: true,
+            confirmButtonColor: "#61a146",
+            cancelButtonColor: "#da2828",
+            confirmButtonText: "Confirmar",
+            cancelButtonText: "Cancelar",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              const cantidadUSD = parseFloat(
+                document.getElementById("swal-input1").value
+              );
+              const cantidadBS = parseFloat(
+                document.getElementById("swal-input2").value
+              );
+              const metodo_pago_bs =
+                document.getElementById("swal2-select").value;
 
-          if (result.isConfirmed) {
-            const cantidadUSD = parseFloat(document.getElementById('swal-input1').value);
-            const cantidadBS = parseFloat(document.getElementById('swal-input2').value);
-            const metodo_pago_bs = document.getElementById('swal2-select').value;
+              const datos = {
+                id_factura: id_factura,
+                cantidadUSD: cantidadUSD,
+                cantidadBS: cantidadBS,
+                metodo_pago_bs: metodo_pago_bs,
+              };
 
-            const datos = {
-              id_factura: id_factura,
-              cantidadUSD: cantidadUSD,
-              cantidadBS: cantidadBS,
-              metodo_pago_bs: metodo_pago_bs
-            };
-
-
-            //if (pagado >= 0) {
-            // Hacer una llamada AJAX para eliminar el registro seleccionado
-            $.ajax({
-              url: "../../controller/billController.php",
-              dataType: "json",
-              type: "POST",
-              data: {
-                datos: datos,
-                function: "pagarFactura",
-              },
-              success: function (response) {
-
-                // Respuesta exitosa - manejar en caso de JSON
-                if (response.success) {
-                  Swal.fire({
-                    title: "Exito",
-                    html: response.msg,
-                    icon: "success",
-                  }).then(() => {
-                    window.location.href = "facturas.php";
-                  });
-                } else {
-                  // Manejar en caso de error
-                  if (response.cashback) {
-                    document.body.addEventListener("keyup", e => {
-                      const tasa_actual = parseFloat(response.tasa_bcv);
-
-                      //Dolares
-                      let vuelto_bs_total = parseFloat(response.vuelto_bs_total);
-
-                      function calcularVuelto(montoBs, montoUsd) {
-
-                        const montoUsdEnBs = montoUsd * tasa_actual;
-                        const totalIngresado = montoBs + montoUsdEnBs;
-                        const vueltoBs = vuelto_bs_total - totalIngresado;
-                        const vueltoUsd = vueltoBs / tasa_actual;
-
-                        return {
-                          vueltoBs,
-                          vueltoUsd
-                        };
-                      }
-                      if ([...e.target.classList].includes("cambios_usd") || [...e.target.classList].includes("cambios_bs")) {
-                        const montoBs = isNaN(parseFloat(document.getElementById("swal-input-bs").value)) ? 0 : parseFloat(document.getElementById("swal-input-bs").value);
-                        const montoUsd = isNaN(parseFloat(document.getElementById("swal-input-usd").value)) ? 0 : parseFloat(document.getElementById("swal-input-usd").value);
-
-                        const {
-                          vueltoBs,
-                          vueltoUsd
-                        } = calcularVuelto(montoBs, montoUsd);
-
-                        e.target.parentElement.querySelector("span .bs_v").innerHTML = parseFloat(vueltoBs.toFixed(2));
-                        e.target.parentElement.querySelector("span .usd_v").innerHTML = parseFloat(vueltoUsd.toFixed(2));
-                      }
-
-                    })
-                    const selects_vuelto = ["Efectivo", "Pago Movil"].map(tipo_pago => `<option value="${tipo_pago}">${tipo_pago}</option>`).join("")
-                    const consultar_vuelto = () => Swal.fire({
-                      title: "Pagar factura - ID: " + id_factura,
-                      html: '<strong>¡Hay cambio!</strong><br>' + response.msg + '<div data-total_vuelto_bs="' + response.vuelto_bs_total + '" data-total_vuelto_usd="' + response.vuelto_usd_total + '"><span>USD: <strong class="usd_v">' + response.vuelto_usd_total + '</strong></span> - <span>BS: <strong class="bs_v">' + response.vuelto_bs_total + '</strong></span><br>' + '¿Cuánto <strong>USD y BS</strong> de cambio deseas entregar?</span><br>' +
-                        '<input id="swal-input-usd" class="swal2-input cambios_usd" type="number" min="0" step="1" placeholder="Cantidad en USD"><hr>' +
-                        '<input id="swal-input-bs" class="swal2-input cambios_bs" type="number" min="0" step="0.1" placeholder="Cantidad en BS"><select id="swal2-select-bs" style="padding: 0 3.95rem" class="swal2-select swal2-input">' + selects_vuelto + '</select></div>',
-                      icon: "info",
-                      showCancelButton: true,
-                      confirmButtonText: 'Confirmar',
-                      cancelButtonText: 'Cancelar',
-                    }).then((result) => {
-                      if (result.isConfirmed) {
-                        const vueltoUSD = parseFloat(document.getElementById('swal-input-usd').value);
-                        const vueltoBS = parseFloat(document.getElementById('swal-input-bs').value);
-                        const metodo_vuelto = document.getElementById('swal2-select-bs').value;
-                        const vuelto_pagado = parseFloat(document.querySelector("[data-total_vuelto_bs] strong.bs_v").innerText)
-
-
-                        //Tomar datos
-                        if (vuelto_pagado == 0) {
-                          const datos = {
-                            id_factura: id_factura,
-                            cantidadUSD: cantidadUSD,
-                            cantidadBS: cantidadBS,
-                            metodo_pago_bs: metodo_pago_bs,
-                            vueltoUSD: vueltoUSD,
-                            vueltoBS: vueltoBS,
-                            metodo_vuelto: metodo_vuelto
-                          };
-
-                          $.ajax({
-                            url: "../../controller/billController.php",
-                            dataType: "json",
-                            type: "POST",
-                            data: {
-                              datos: datos,
-                              function: "pagarFactura",
-                            },
-                            success: function (response) {
-                              // Respuesta exitosa - manejar en caso de JSON
-                              if (response.success) {
-                                Swal.fire({
-                                  title: "Exito",
-                                  html: response.msg,
-                                  icon: "success",
-                                }).then(() => {
-                                  window.location.href = "facturas.php";
-                                });
-                              } else {
-                                Swal.fire({
-                                  title: "Atencion!",
-                                  html: response.msg,
-                                  icon: "warning",
-                                }).then(() => {
-                                  window.location.href = "facturas.php";
-                                });
-                              }
-
-                            },
-                            error: function (error) {
-                              // Mostrar una alerta de error si no se puede pagar el registro
-                              console.log(error);
-                              Swal.fire({
-                                title: "Error",
-                                text: "Oops ha ocurrido un error interno.",
-                                icon: "error",
-                              });
-                            },
-                          });
-
-                        } else {
-                          Swal.fire({
-                            title: "Atencion!",
-                            text: 'Vuelto a entregar incorrecto!',
-                            icon: "error",
-                          }).then(() => {
-                            consultar_vuelto()
-                          });
-                        }
-
-
-                      }
-                    });
-                    consultar_vuelto()
-                  } else {
+              //if (pagado >= 0) {
+              // Hacer una llamada AJAX para eliminar el registro seleccionado
+              $.ajax({
+                url: "../../controller/billController.php",
+                dataType: "json",
+                type: "POST",
+                data: {
+                  datos: datos,
+                  function: "pagarFactura",
+                },
+                success: function (response) {
+                  // Respuesta exitosa - manejar en caso de JSON
+                  if (response.success) {
                     Swal.fire({
-                      title: "Atencion!",
+                      title: "Exito",
                       html: response.msg,
-                      icon: "warning",
+                      icon: "success",
                     }).then(() => {
                       window.location.href = "facturas.php";
                     });
+                  } else {
+                    // Manejar en caso de error
+                    if (response.cashback) {
+                      document.body.addEventListener("keyup", (e) => {
+                        const tasa_actual = parseFloat(response.tasa_bcv);
+
+                        //Dolares
+                        let vuelto_bs_total = parseFloat(
+                          response.vuelto_bs_total
+                        );
+
+                        function calcularVuelto(montoBs, montoUsd) {
+                          const montoUsdEnBs = montoUsd * tasa_actual;
+                          const totalIngresado = montoBs + montoUsdEnBs;
+                          const vueltoBs = vuelto_bs_total - totalIngresado;
+                          const vueltoUsd = vueltoBs / tasa_actual;
+
+                          return {
+                            vueltoBs,
+                            vueltoUsd,
+                          };
+                        }
+                        if (
+                          [...e.target.classList].includes("cambios_usd") ||
+                          [...e.target.classList].includes("cambios_bs")
+                        ) {
+                          const montoBs = isNaN(
+                            parseFloat(
+                              document.getElementById("swal-input-bs").value
+                            )
+                          )
+                            ? 0
+                            : parseFloat(
+                                document.getElementById("swal-input-bs").value
+                              );
+                          const montoUsd = isNaN(
+                            parseFloat(
+                              document.getElementById("swal-input-usd").value
+                            )
+                          )
+                            ? 0
+                            : parseFloat(
+                                document.getElementById("swal-input-usd").value
+                              );
+
+                          const { vueltoBs, vueltoUsd } = calcularVuelto(
+                            montoBs,
+                            montoUsd
+                          );
+
+                          e.target.parentElement.querySelector(
+                            "span .bs_v"
+                          ).innerHTML = parseFloat(vueltoBs.toFixed(2));
+                          e.target.parentElement.querySelector(
+                            "span .usd_v"
+                          ).innerHTML = parseFloat(vueltoUsd.toFixed(2));
+                        }
+                      });
+                      const selects_vuelto = ["Efectivo", "Pago Movil"]
+                        .map(
+                          (tipo_pago) =>
+                            `<option value="${tipo_pago}">${tipo_pago}</option>`
+                        )
+                        .join("");
+                      const consultar_vuelto = () =>
+                        Swal.fire({
+                          title: "Pagar factura - ID: " + id_factura,
+                          html:
+                            "<strong>¡Hay cambio!</strong><br>" +
+                            response.msg +
+                            '<div data-total_vuelto_bs="' +
+                            response.vuelto_bs_total +
+                            '" data-total_vuelto_usd="' +
+                            response.vuelto_usd_total +
+                            '"><span>USD: <strong class="usd_v">' +
+                            response.vuelto_usd_total +
+                            '</strong></span> - <span>BS: <strong class="bs_v">' +
+                            response.vuelto_bs_total +
+                            "</strong></span><br>" +
+                            "¿Cuánto <strong>USD y BS</strong> de cambio deseas entregar?</span><br>" +
+                            '<input id="swal-input-usd" class="swal2-input cambios_usd" type="number" min="0" step="1" placeholder="Cantidad en USD"><hr>' +
+                            '<input id="swal-input-bs" class="swal2-input cambios_bs" type="number" min="0" step="0.1" placeholder="Cantidad en BS"><select id="swal2-select-bs" style="padding: 0 3.95rem" class="swal2-select swal2-input">' +
+                            selects_vuelto +
+                            "</select></div>",
+                          icon: "info",
+                          showCancelButton: true,
+                          confirmButtonText: "Confirmar",
+                          cancelButtonText: "Cancelar",
+                        }).then((result) => {
+                          if (result.isConfirmed) {
+                            const vueltoUSD = parseFloat(
+                              document.getElementById("swal-input-usd").value
+                            );
+                            const vueltoBS = parseFloat(
+                              document.getElementById("swal-input-bs").value
+                            );
+                            const metodo_vuelto =
+                              document.getElementById("swal2-select-bs").value;
+                            const vuelto_pagado = parseFloat(
+                              document.querySelector(
+                                "[data-total_vuelto_bs] strong.bs_v"
+                              ).innerText
+                            );
+
+                            //Tomar datos
+                            if (vuelto_pagado == 0) {
+                              const datos = {
+                                id_factura: id_factura,
+                                cantidadUSD: cantidadUSD,
+                                cantidadBS: cantidadBS,
+                                metodo_pago_bs: metodo_pago_bs,
+                                vueltoUSD: vueltoUSD,
+                                vueltoBS: vueltoBS,
+                                metodo_vuelto: metodo_vuelto,
+                              };
+
+                              $.ajax({
+                                url: "../../controller/billController.php",
+                                dataType: "json",
+                                type: "POST",
+                                data: {
+                                  datos: datos,
+                                  function: "pagarFactura",
+                                },
+                                success: function (response) {
+                                  // Respuesta exitosa - manejar en caso de JSON
+                                  if (response.success) {
+                                    Swal.fire({
+                                      title: "Exito",
+                                      html: response.msg,
+                                      icon: "success",
+                                    }).then(() => {
+                                      window.location.href = "facturas.php";
+                                    });
+                                  } else {
+                                    Swal.fire({
+                                      title: "Atencion!",
+                                      html: response.msg,
+                                      icon: "warning",
+                                    }).then(() => {
+                                      window.location.href = "facturas.php";
+                                    });
+                                  }
+                                },
+                                error: function (error) {
+                                  // Mostrar una alerta de error si no se puede pagar el registro
+                                  console.log(error);
+                                  Swal.fire({
+                                    title: "Error",
+                                    text: "Oops ha ocurrido un error interno.",
+                                    icon: "error",
+                                  });
+                                },
+                              });
+                            } else {
+                              Swal.fire({
+                                title: "Atencion!",
+                                text: "Vuelto a entregar incorrecto!",
+                                icon: "error",
+                              }).then(() => {
+                                consultar_vuelto();
+                              });
+                            }
+                          }
+                        });
+                      consultar_vuelto();
+                    } else {
+                      Swal.fire({
+                        title: "Atencion!",
+                        html: response.msg,
+                        icon: "warning",
+                      }).then(() => {
+                        window.location.href = "facturas.php";
+                      });
+                    }
                   }
-
-                }
-              },
-              error: function (error) {
-                // Mostrar una alerta de error si no se puede pagar el registro
-                console.log(error);
-                Swal.fire({
-                  title: "Error",
-                  text: "Oops ha ocurrido un error interno.",
-                  icon: "error",
-                });
-              },
-            });
-
-
-
-          }
-
-
-
-        });
+                },
+                error: function (error) {
+                  // Mostrar una alerta de error si no se puede pagar el registro
+                  console.log(error);
+                  Swal.fire({
+                    title: "Error",
+                    text: "Oops ha ocurrido un error interno.",
+                    icon: "error",
+                  });
+                },
+              });
+            }
+          });
         consultar_pago();
       },
       error: function (error) {
@@ -2418,7 +2850,6 @@ $(document).ready(function () {
 
   //DATATABLE FACTURAS
   if ($("#tabla_facturas_pendientes").length) {
-
     $("#tabla_facturas_pendientes").DataTable({
       pageLength: 10,
       ajax: {
@@ -2430,7 +2861,8 @@ $(document).ready(function () {
           function: "obtenerFacturasPendientes",
         },
       },
-      columns: [{
+      columns: [
+        {
           data: "id",
           width: "5px",
         },
@@ -2460,27 +2892,25 @@ $(document).ready(function () {
           },
         },
       ],
-      order: [
-        [0, "desc"]
-      ],
+      order: [[0, "desc"]],
       createdRow: function (row, data, dataIndex) {
         if (data.id_status == 4) {
           $("td:eq(4)", row).html(
             '<span class="badge text-bg-success text-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         } else if (data.id_status == 6) {
           $("td:eq(4)", row).html(
             '<span class="badge text-bg-danger text-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         } else {
           $("td:eq(4)", row).html(
             '<span class="badge text-bg-warning text-black">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         }
       },
@@ -2495,24 +2925,26 @@ $(document).ready(function () {
       enviarDataPDF(id_factura);
     });
 
-
     // IMPRIMIR TICKET
-    $("#tabla_facturas_pendientes").on("click", ".imprimir-factura", function () {
-      // Obtener el ID del registro seleccionado
-      let id_factura = $(this).attr("id");
-      enviarDataTicket(id_factura);
-    });
+    $("#tabla_facturas_pendientes").on(
+      "click",
+      ".imprimir-factura",
+      function () {
+        // Obtener el ID del registro seleccionado
+        let id_factura = $(this).attr("id");
+        enviarDataTicket(id_factura);
+      }
+    );
 
     // PAGAR FACTURA
     $("#tabla_facturas_pendientes").on("click", ".pagar-factura", function () {
       let id_factura = $(this).attr("id");
-      pagar_factura(id_factura)
+      pagar_factura(id_factura);
     });
   }
 
   //DATATABLE FACTURAS
   if ($("#tabla_facturas_anuladas").length) {
-
     $("#tabla_facturas_anuladas").DataTable({
       pageLength: 10,
       ajax: {
@@ -2524,7 +2956,8 @@ $(document).ready(function () {
           function: "obtenerFacturasAnuladas",
         },
       },
-      columns: [{
+      columns: [
+        {
           data: "id",
           width: "5px",
         },
@@ -2554,27 +2987,25 @@ $(document).ready(function () {
           },
         },
       ],
-      order: [
-        [0, "desc"]
-      ],
+      order: [[0, "desc"]],
       createdRow: function (row, data, dataIndex) {
         if (data.id_status == 4) {
           $("td:eq(4)", row).html(
             '<span class="badge text-bg-success text-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         } else if (data.id_status == 6) {
           $("td:eq(4)", row).html(
             '<span class="badge text-bg-danger text-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         } else {
           $("td:eq(4)", row).html(
             '<span class="badge text-bg-warning text-black">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         }
       },
@@ -2589,19 +3020,16 @@ $(document).ready(function () {
       enviarDataPDF(id_factura);
     });
 
-
     // IMPRIMIR TICKET
     $("#tabla_facturas_anuladas").on("click", ".imprimir-factura", function () {
       // Obtener el ID del registro seleccionado
       let id_factura = $(this).attr("id");
       enviarDataTicket(id_factura);
     });
-
   }
 
   //DATATABLE FACTURAS
   if ($("#tabla_apartado").length) {
-
     $("#tabla_apartado").DataTable({
       pageLength: 10,
       ajax: {
@@ -2613,7 +3041,8 @@ $(document).ready(function () {
           function: "obtenerProductosApartados",
         },
       },
-      columns: [{
+      columns: [
+        {
           data: "id",
           width: "5px",
         },
@@ -2639,9 +3068,7 @@ $(document).ready(function () {
           data: "date_created",
         },
       ],
-      order: [
-        [0, "desc"]
-      ],
+      order: [[0, "desc"]],
       // createdRow: function (row, data, dataIndex) {
       //   if (data.id_status == 4) {
       //     $("td:eq(4)", row).html(
@@ -2670,14 +3097,17 @@ $(document).ready(function () {
 
   // LOGICA NUEVA FACTURA
   if ($("#ventas").length) {
-    document.body.addEventListener("keyup", e => {
-      const tasa_actual = parseFloat(document.getElementById("tasa_protegida").value);
+    document.body.addEventListener("keyup", (e) => {
+      const tasa_actual = parseFloat(
+        document.getElementById("tasa_protegida").value
+      );
 
       //Dolares
-      let vuelto_bs_total = parseFloat(e.target.parentElement.getAttribute("data-total_vuelto_bs"));
+      let vuelto_bs_total = parseFloat(
+        e.target.parentElement.getAttribute("data-total_vuelto_bs")
+      );
 
       function calcularVuelto(montoBs, montoUsd) {
-
         const montoUsdEnBs = montoUsd * tasa_actual;
         const totalIngresado = montoBs + montoUsdEnBs;
         const vueltoBs = vuelto_bs_total - totalIngresado;
@@ -2685,23 +3115,33 @@ $(document).ready(function () {
 
         return {
           vueltoBs,
-          vueltoUsd
+          vueltoUsd,
         };
       }
-      if ([...e.target.classList].includes("cambios") || [...e.target.classList].includes("cambios2")) {
-        const montoBs = isNaN(parseFloat(document.getElementById("swal-input2").value)) ? 0 : parseFloat(document.getElementById("swal-input2").value);
-        const montoUsd = isNaN(parseFloat(document.getElementById("swal-input1").value)) ? 0 : parseFloat(document.getElementById("swal-input1").value);
+      if (
+        [...e.target.classList].includes("cambios") ||
+        [...e.target.classList].includes("cambios2")
+      ) {
+        const montoBs = isNaN(
+          parseFloat(document.getElementById("swal-input2").value)
+        )
+          ? 0
+          : parseFloat(document.getElementById("swal-input2").value);
+        const montoUsd = isNaN(
+          parseFloat(document.getElementById("swal-input1").value)
+        )
+          ? 0
+          : parseFloat(document.getElementById("swal-input1").value);
 
-        const {
-          vueltoBs,
-          vueltoUsd
-        } = calcularVuelto(montoBs, montoUsd);
+        const { vueltoBs, vueltoUsd } = calcularVuelto(montoBs, montoUsd);
 
-        e.target.parentElement.querySelector("span .bs").innerHTML = parseFloat(vueltoBs.toFixed(2));
-        e.target.parentElement.querySelector("span .usd").innerHTML = parseFloat(vueltoUsd.toFixed(2));
+        e.target.parentElement.querySelector("span .bs").innerHTML = parseFloat(
+          vueltoBs.toFixed(2)
+        );
+        e.target.parentElement.querySelector("span .usd").innerHTML =
+          parseFloat(vueltoUsd.toFixed(2));
       }
-
-    })
+    });
     $("#agregar_producto").slideUp();
     $("#procesar_venta").slideUp();
     $("#tabla_producto_venta").DataTable();
@@ -2749,12 +3189,12 @@ $(document).ready(function () {
           $.each(data, function (i, item) {
             $("#client").append(
               "<option value='" +
-              item.id +
-              "'>" +
-              item.ced +
-              " - " +
-              item.name +
-              "</option>"
+                item.id +
+                "'>" +
+                item.ced +
+                " - " +
+                item.name +
+                "</option>"
             );
           });
         },
@@ -2823,7 +3263,7 @@ $(document).ready(function () {
         id: id,
         id_type: id_type,
         id_client: id_client,
-        id_user: id_user
+        id_user: id_user,
       };
 
       $.ajax({
@@ -2854,8 +3294,7 @@ $(document).ready(function () {
     //Validar cantidad del producto antes de agregar
     $("#quantity_product").keyup(function (e) {
       e.preventDefault();
-      let quantity_act = $(this).val()
-
+      let quantity_act = $(this).val();
 
       let tasa_actual = $("#tasa_protegida").val();
       let precio_total = quantity_act * $("#price_product").val();
@@ -2883,11 +3322,9 @@ $(document).ready(function () {
       const id_client = document.getElementById("client").value.trim();
       const id_user = document.getElementById("id_user").value.trim();
       calculoTotalVenta(id_client, id_user);
-
     });
 
     function EsCreditos(creditos) {
-
       const Toast_Credito = Swal.mixin({
         toast: true,
         position: "top-end",
@@ -2905,30 +3342,37 @@ $(document).ready(function () {
       const totalrestantebs = parseFloat($("#vuelto2").text());
 
       // No es credito
-      if (creditos == '0') {
-
-        if (totalrestante >= 0 && totalrestantebs >= 0 && totalVenta > 0 && totalVentaBs > 0) {
+      if (creditos == "0") {
+        if (
+          totalrestante >= 0 &&
+          totalrestantebs >= 0 &&
+          totalVenta > 0 &&
+          totalVentaBs > 0
+        ) {
           // Habilitar el botón
           $("#procesar_venta").slideDown();
         } else {
-
           Toast_Credito.fire({
             icon: "warning",
-            title: 'Vuelto debe ser mayor o igual a 0',
+            title: "Vuelto debe ser mayor o igual a 0",
           });
           // Deshabilitar el botón
           $("#procesar_venta").slideUp();
         }
       } else {
         // Es a credito
-        if (totalrestante < 0 && totalrestantebs < 0 && totalVenta > 0 && totalVentaBs > 0) {
+        if (
+          totalrestante < 0 &&
+          totalrestantebs < 0 &&
+          totalVenta > 0 &&
+          totalVentaBs > 0
+        ) {
           // Habilitar el botón
           $("#procesar_venta").slideDown();
         } else {
-
           Toast_Credito.fire({
             icon: "warning",
-            title: 'Credito seleccionado, vuelto no debe ser mayor a 0',
+            title: "Credito seleccionado, vuelto no debe ser mayor a 0",
           });
           // Deshabilitar el botón
           $("#procesar_venta").slideUp();
@@ -2936,13 +3380,11 @@ $(document).ready(function () {
       }
     }
 
-
     $("#credito").on("change", function () {
       // Obtenemos el estado actual del checkbox
-      let estaMarcado = $(this).prop('checked') == true ? '1' : '0';
+      let estaMarcado = $(this).prop("checked") == true ? "1" : "0";
       $("#credito").val(estaMarcado);
       EsCreditos(estaMarcado);
-
     });
 
     $("#agregar_producto").click(function (e) {
@@ -2951,14 +3393,16 @@ $(document).ready(function () {
       const id_client = document.getElementById("client").value.trim();
       const id_user = document.getElementById("id_user").value.trim();
       const id_product = document.getElementById("product").value.trim();
-      const quantity_product = document.getElementById("quantity_product").value.trim();
+      const quantity_product = document
+        .getElementById("quantity_product")
+        .value.trim();
 
       // ¡Lógica AJAX aquí
       const datos = {
         id_client: id_client,
         id_user: id_user,
         id_product: id_product,
-        quantity_product: quantity_product
+        quantity_product: quantity_product,
       };
       calculoTotalVenta(id_client, id_user);
       agregarProductoVenta(JSON.stringify(datos)); // Convertir a JSON antes de enviar
@@ -2992,7 +3436,6 @@ $(document).ready(function () {
               const id_user = document.getElementById("id_user").value.trim();
               $("#tasa_protegida").val(response.tasa_protegida);
               updateTable(id_client, id_user);
-
 
               const Toast = Swal.mixin({
                 toast: true,
@@ -3048,9 +3491,14 @@ $(document).ready(function () {
           const method4 = document.getElementById("method4");
           const method5 = document.getElementById("method5");
           const method6 = document.getElementById("method6");
-          const select_pago_movil = document.getElementById("select_pago_movil");
-          const select_transferencia_directa_bs = document.getElementById("select_transferencia_directa_bs");
-          const select_transferencia_directa_dls = document.getElementById("select_transferencia_directa_dls");
+          const select_pago_movil =
+            document.getElementById("select_pago_movil");
+          const select_transferencia_directa_bs = document.getElementById(
+            "select_transferencia_directa_bs"
+          );
+          const select_transferencia_directa_dls = document.getElementById(
+            "select_transferencia_directa_dls"
+          );
           const credito = document.getElementById("credito");
 
           if (response.length > 0) {
@@ -3235,14 +3683,17 @@ $(document).ready(function () {
           let banco_pago_movil = pago_movil.selectedOptions[0];
           let banco4 = banco_pago_movil.text;
 
-          let transf_direct_bs = document.getElementById("select_transferencia_directa_bs");
+          let transf_direct_bs = document.getElementById(
+            "select_transferencia_directa_bs"
+          );
           let banco_transf_directa_bs = transf_direct_bs.selectedOptions[0];
           let banco5 = banco_transf_directa_bs.text;
 
-          let transf_directa_dls = document.getElementById("select_transferencia_directa_dls");
+          let transf_directa_dls = document.getElementById(
+            "select_transferencia_directa_dls"
+          );
           let banco_transf_directa_dls = transf_directa_dls.selectedOptions[0];
           let banco6 = banco_transf_directa_dls.text;
-
 
           //Quitamos coma para que permita miles
           let totalVentaText = total_bs;
@@ -3250,20 +3701,19 @@ $(document).ready(function () {
           let totalVenta = parseFloat(totalVentaSinComas);
           let totalPago = 0;
 
-          if (banco4 == 'Selecciona un banco') {
-            method4 = 0
+          if (banco4 == "Selecciona un banco") {
+            method4 = 0;
           }
 
-          if (banco5 == 'Selecciona un banco') {
-            method5 = 0
+          if (banco5 == "Selecciona un banco") {
+            method5 = 0;
           }
 
-          if (banco6 == 'Selecciona un banco') {
-            method6 = 0
+          if (banco6 == "Selecciona un banco") {
+            method6 = 0;
           }
 
           if (totalVenta > 0) {
-
             // Convertir dolares a bolivares
             let tasa_actual = tasa_select;
             let totalDolares = (method2 + method6) * tasa_actual;
@@ -3319,7 +3769,8 @@ $(document).ready(function () {
             datos: datos,
           },
         },
-        columns: [{
+        columns: [
+          {
             data: "id_product",
             width: "5px",
           },
@@ -3380,14 +3831,14 @@ $(document).ready(function () {
           $.each(data, function (i, item) {
             $("#product").append(
               "<option value='" +
-              item.id +
-              "'>" +
-              item.id +
-              " - " +
-              item.name +
-              " " +
-              item.model +
-              "</option>"
+                item.id +
+                "'>" +
+                item.id +
+                " - " +
+                item.name +
+                " " +
+                item.model +
+                "</option>"
             );
           });
         },
@@ -3416,12 +3867,12 @@ $(document).ready(function () {
           $.each(data, function (i, item) {
             $(".select_multiple").append(
               "<option value='" +
-              item.id +
-              "'>" +
-              item.payment_code +
-              " - " +
-              item.name +
-              "</option>"
+                item.id +
+                "'>" +
+                item.payment_code +
+                " - " +
+                item.name +
+                "</option>"
             );
           });
         },
@@ -3455,17 +3906,16 @@ $(document).ready(function () {
 
     //FACTURA
 
-
-
     $("#procesar_venta").click(function (e) {
       e.preventDefault();
-
 
       //!COLOCAR LUEGO DE BORRAR LA TABLA DE PRODUCTOS DE VENTAS
       // Obtención de los valores del formulario
       const id_client = document.getElementById("client").value.trim();
       const id_user = document.getElementById("id_user").value.trim();
-      const id_documento = document.getElementById("select_documento").value.trim();
+      const id_documento = document
+        .getElementById("select_documento")
+        .value.trim();
       //!![...document.querySelectorAll('.form-control')].reduce((curr, x) => ({ ...curr, [x.getAttribute('id')]: x.value }) ,{})
       const idmethod1 = document.getElementById("idmethod1").value.trim();
       const method1 = document.getElementById("method1").value.trim();
@@ -3483,10 +3933,14 @@ $(document).ready(function () {
       const pago_movil = document.getElementById("select_pago_movil");
       const banco_pago_movil = pago_movil.selectedOptions[0];
       const banco4 = banco_pago_movil.text;
-      const transf_direct_bs = document.getElementById("select_transferencia_directa_bs");
+      const transf_direct_bs = document.getElementById(
+        "select_transferencia_directa_bs"
+      );
       const banco_transf_directa_bs = transf_direct_bs.selectedOptions[0];
       const banco5 = banco_transf_directa_bs.text;
-      const transf_directa_dls = document.getElementById("select_transferencia_directa_dls");
+      const transf_directa_dls = document.getElementById(
+        "select_transferencia_directa_dls"
+      );
       const banco_transf_directa_dls = transf_directa_dls.selectedOptions[0];
       const banco6 = banco_transf_directa_dls.text;
 
@@ -3518,124 +3972,163 @@ $(document).ready(function () {
         is_credito: is_credito,
         banco4: banco4,
         banco5: banco5,
-        banco6: banco6
+        banco6: banco6,
       };
 
       //LOGICA VUELTOS
       if (is_credito == 0 && vuelto_usd > 0 && vuelto_bs > 0) {
-
         procesarCambioVenta(vuelto_usd, vuelto_bs);
-
       } else {
         procesarVenta(JSON.stringify(datos));
       }
 
-
       function procesarCambioVenta(usd, bs) {
+        const selects = ["Efectivo", "Pago Movil"]
+          .map(
+            (tipo_pago) => `<option value="${tipo_pago}">${tipo_pago}</option>`
+          )
+          .join("");
 
-        const selects = ["Efectivo", "Pago Movil"].map(tipo_pago => `<option value="${tipo_pago}">${tipo_pago}</option>`).join("")
+        const consultar_vuelto = () =>
+          Swal.fire({
+            title: "¡Hay cambio!",
+            html:
+              '<div data-total_vuelto_bs="' +
+              bs +
+              '" data-total_vuelto_usd="' +
+              usd +
+              '"><span>USD: <strong class="usd">' +
+              usd +
+              "</strong> - " +
+              'BS: <strong class="bs">' +
+              bs +
+              "</strong><br>" +
+              "¿Cuánto <strong>USD y BS</strong> de cambio deseas entregar?</span><br>" +
+              '<input id="swal-input1" class="swal2-input cambios usd" type="number" min="0" step="0.1" placeholder="Cantidad en USD"><hr>' +
+              '<input id="swal-input2" class="swal2-input cambios2 bs" type="number" min="0" step="0.1" placeholder="Cantidad en BS"><select id="swal2-select" style="padding: 0 3.95rem" class="swal2-select swal2-input">' +
+              selects +
+              "</select></div>",
+            showCancelButton: true,
+            confirmButtonText: "Confirmar",
+            cancelButtonText: "Cancelar",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              const cantidadUSD = parseFloat(
+                document.getElementById("swal-input1").value
+              );
+              const cantidadBS = parseFloat(
+                document.getElementById("swal-input2").value
+              );
+              const metodo_vuelto =
+                document.getElementById("swal2-select").value;
+              const vuelto_bs = parseFloat(
+                document.querySelector("[data-total_vuelto_bs] strong.bs")
+                  .innerText
+              );
 
-        const consultar_vuelto = () => Swal.fire({
-          title: '¡Hay cambio!',
-          html: '<div data-total_vuelto_bs="' + bs + '" data-total_vuelto_usd="' + usd + '"><span>USD: <strong class="usd">' + usd + '</strong> - ' + 'BS: <strong class="bs">' + bs + '</strong><br>' + '¿Cuánto <strong>USD y BS</strong> de cambio deseas entregar?</span><br>' +
-            '<input id="swal-input1" class="swal2-input cambios usd" type="number" min="0" step="0.1" placeholder="Cantidad en USD"><hr>' +
-            '<input id="swal-input2" class="swal2-input cambios2 bs" type="number" min="0" step="0.1" placeholder="Cantidad en BS"><select id="swal2-select" style="padding: 0 3.95rem" class="swal2-select swal2-input">' + selects + '</select></div>',
-          showCancelButton: true,
-          confirmButtonText: 'Confirmar',
-          cancelButtonText: 'Cancelar',
-        }).then((result) => {
-          if (result.isConfirmed) {
-            const cantidadUSD = parseFloat(document.getElementById('swal-input1').value);
-            const cantidadBS = parseFloat(document.getElementById('swal-input2').value);
-            const metodo_vuelto = document.getElementById('swal2-select').value;
-            const vuelto_bs = parseFloat(document.querySelector("[data-total_vuelto_bs] strong.bs").innerText)
+              //Tomar datos
+              if (vuelto_bs == 0) {
+                // const selector_to_object = (selector, prop) => {
+                //   return [...document.querySelectorAll(selector)].reduce((curr, x) => ({
+                //     ...curr,
+                //     [x.getAttribute('id')]: x[prop]
+                //   }), {})
+                // }
 
-            //Tomar datos
-            if (vuelto_bs == 0) {
+                const id_client = document
+                  .getElementById("client")
+                  .value.trim();
+                const id_user = document.getElementById("id_user").value.trim();
+                const id_documento = document
+                  .getElementById("select_documento")
+                  .value.trim();
+                const idmethod1 = document
+                  .getElementById("idmethod1")
+                  .value.trim();
+                const method1 = document.getElementById("method1").value.trim();
+                const idmethod2 = document
+                  .getElementById("idmethod2")
+                  .value.trim();
+                const method2 = document.getElementById("method2").value.trim();
+                const idmethod3 = document
+                  .getElementById("idmethod3")
+                  .value.trim();
+                const method3 = document.getElementById("method3").value.trim();
+                const idmethod4 = document
+                  .getElementById("idmethod4")
+                  .value.trim();
+                const method4 = document.getElementById("method4").value.trim();
+                const idmethod5 = document
+                  .getElementById("idmethod5")
+                  .value.trim();
+                const method5 = document.getElementById("method5").value.trim();
+                const idmethod6 = document
+                  .getElementById("idmethod6")
+                  .value.trim();
+                const method6 = document.getElementById("method6").value.trim();
+                const pago_movil = document.getElementById("select_pago_movil");
+                const banco_pago_movil = pago_movil.selectedOptions[0];
+                const banco4 = banco_pago_movil.text;
+                const transf_direct_bs = document.getElementById(
+                  "select_transferencia_directa_bs"
+                );
+                const banco_transf_directa_bs =
+                  transf_direct_bs.selectedOptions[0];
+                const banco5 = banco_transf_directa_bs.text;
+                const transf_directa_dls = document.getElementById(
+                  "select_transferencia_directa_dls"
+                );
+                const banco_transf_directa_dls =
+                  transf_directa_dls.selectedOptions[0];
+                const banco6 = banco_transf_directa_dls.text;
 
-              // const selector_to_object = (selector, prop) => {
-              //   return [...document.querySelectorAll(selector)].reduce((curr, x) => ({
-              //     ...curr,
-              //     [x.getAttribute('id')]: x[prop]
-              //   }), {})
-              // }
+                const ship = document
+                  .getElementById("select_retiro")
+                  .value.trim();
+                const is_credito = document.getElementById("credito").value;
 
-              const id_client = document.getElementById("client").value.trim();
-              const id_user = document.getElementById("id_user").value.trim();
-              const id_documento = document.getElementById("select_documento").value.trim();
-              const idmethod1 = document.getElementById("idmethod1").value.trim();
-              const method1 = document.getElementById("method1").value.trim();
-              const idmethod2 = document.getElementById("idmethod2").value.trim();
-              const method2 = document.getElementById("method2").value.trim();
-              const idmethod3 = document.getElementById("idmethod3").value.trim();
-              const method3 = document.getElementById("method3").value.trim();
-              const idmethod4 = document.getElementById("idmethod4").value.trim();
-              const method4 = document.getElementById("method4").value.trim();
-              const idmethod5 = document.getElementById("idmethod5").value.trim();
-              const method5 = document.getElementById("method5").value.trim();
-              const idmethod6 = document.getElementById("idmethod6").value.trim();
-              const method6 = document.getElementById("method6").value.trim();
-              const pago_movil = document.getElementById("select_pago_movil");
-              const banco_pago_movil = pago_movil.selectedOptions[0];
-              const banco4 = banco_pago_movil.text;
-              const transf_direct_bs = document.getElementById("select_transferencia_directa_bs");
-              const banco_transf_directa_bs = transf_direct_bs.selectedOptions[0];
-              const banco5 = banco_transf_directa_bs.text;
-              const transf_directa_dls = document.getElementById("select_transferencia_directa_dls");
-              const banco_transf_directa_dls = transf_directa_dls.selectedOptions[0];
-              const banco6 = banco_transf_directa_dls.text;
+                // ¡Lógica AJAX aquí
+                const datos = {
+                  id_client,
+                  id_user,
+                  id_documento,
+                  idmethod1,
+                  method1,
+                  idmethod2,
+                  method2,
+                  idmethod3,
+                  method3,
+                  idmethod4,
+                  method4,
+                  idmethod5,
+                  method5,
+                  idmethod6,
+                  method6,
+                  ship,
+                  is_credito,
+                  banco4,
+                  banco5,
+                  banco6,
+                  cantidadUSD,
+                  cantidadBS,
+                  metodo_vuelto,
+                };
 
-              const ship = document.getElementById("select_retiro").value.trim();
-              const is_credito = document.getElementById("credito").value;
-
-              // ¡Lógica AJAX aquí
-              const datos = {
-                id_client,
-                id_user,
-                id_documento,
-                idmethod1,
-                method1,
-                idmethod2,
-                method2,
-                idmethod3,
-                method3,
-                idmethod4,
-                method4,
-                idmethod5,
-                method5,
-                idmethod6,
-                method6,
-                ship,
-                is_credito,
-                banco4,
-                banco5,
-                banco6,
-                cantidadUSD,
-                cantidadBS,
-                metodo_vuelto,
-              };
-
-              // Procesar las cantidades de cambio
-              procesarVenta(JSON.stringify(datos));
-
-
-            } else {
-              Swal.fire({
-                title: "Atencion!",
-                text: 'Vuelto a entregar incorrecto!',
-                icon: "error",
-              }).then(() => {
-                consultar_vuelto()
-              });
+                // Procesar las cantidades de cambio
+                procesarVenta(JSON.stringify(datos));
+              } else {
+                Swal.fire({
+                  title: "Atencion!",
+                  text: "Vuelto a entregar incorrecto!",
+                  icon: "error",
+                }).then(() => {
+                  consultar_vuelto();
+                });
+              }
             }
-
-
-          }
-        });
-        consultar_vuelto()
+          });
+        consultar_vuelto();
       }
-
-
 
       function procesarVenta(datos) {
         $("#procesar_venta").slideUp();
@@ -3657,7 +4150,7 @@ $(document).ready(function () {
                 enviarDataPDF(response.id_bill);
               }
             } else {
-              console.log(response)
+              console.log(response);
               Swal.fire({
                 title: "Atencion!",
                 text: response.error,
@@ -3951,7 +4444,8 @@ $(document).ready(function () {
           function: "obtenerHistorial",
         },
       },
-      columns: [{
+      columns: [
+        {
           data: "id",
           width: "5px",
         },
@@ -4099,7 +4593,8 @@ $(document).ready(function () {
           function: "obtenerSalariosEmpleados",
         },
       },
-      columns: [{
+      columns: [
+        {
           data: "id",
           width: "5px",
         },
@@ -4129,20 +4624,20 @@ $(document).ready(function () {
         if (data.id_status == 4) {
           $("td:eq(5)", row).html(
             '<span class="badge text-bg-success text-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         } else if (data.id_status == 5) {
           $("td:eq(5)", row).html(
             '<span class="badge text-bg-warning text-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         } else {
           $("td:eq(5)", row).html(
             '<span class="badge text-bg-danger text-white">' +
-            data.status +
-            "</span>"
+              data.status +
+              "</span>"
           );
         }
       },
@@ -4204,8 +4699,8 @@ $(document).ready(function () {
 
       let id = $(this).attr("id");
       const datos = {
-        id: id
-      }
+        id: id,
+      };
       $("#tabla_comisiones").DataTable({
         pageLength: 10,
         ajax: {
@@ -4215,10 +4710,11 @@ $(document).ready(function () {
           dataType: "json",
           data: {
             function: "obtenerDetallesNomina",
-            datos: datos
+            datos: datos,
           },
         },
-        columns: [{
+        columns: [
+          {
             data: "id",
             width: "5px",
           },
@@ -4242,37 +4738,37 @@ $(document).ready(function () {
           },
         ],
         createdRow: function (row, data, dataIndex) {
-          const pagarNominaButton = document.getElementById('pagar_nomina');
+          const pagarNominaButton = document.getElementById("pagar_nomina");
           let salary = parseFloat(data.salary);
           let suma_total_comisiones = parseFloat(data.suma_total_comisiones);
           $("#suma").text(suma_total_comisiones);
           $("#salary").text(salary);
           $("#total_salary").text(suma_total_comisiones + salary);
-          if (data.estado_comision == 'Procesado') {
+          if (data.estado_comision == "Procesado") {
             $("td:eq(4)", row).html(
               '<span class="badge text-bg-success text-white">' +
-              data.estado_comision +
-              "</span>"
+                data.estado_comision +
+                "</span>"
             );
           } else {
             $("td:eq(4)", row).html(
               '<span class="badge text-bg-warning text-black">' +
-              data.estado_comision +
-              "</span>"
+                data.estado_comision +
+                "</span>"
             );
           }
-          if (data.pago_nomina == 'Pagado') {
-            pagarNominaButton.style.display = 'none'; // Hide the button
+          if (data.pago_nomina == "Pagado") {
+            pagarNominaButton.style.display = "none"; // Hide the button
             $("td:eq(5)", row).html(
               '<span class="badge text-bg-success text-white">' +
-              data.pago_nomina +
-              "</span>"
+                data.pago_nomina +
+                "</span>"
             );
           } else {
             $("td:eq(5)", row).html(
               '<span class="badge text-bg-warning text-black">' +
-              data.pago_nomina +
-              "</span>"
+                data.pago_nomina +
+                "</span>"
             );
           }
         },
@@ -4280,11 +4776,11 @@ $(document).ready(function () {
         scrollCollapse: true,
         searching: false,
         bLengthChange: false,
-        destroy: true
+        destroy: true,
       });
 
       //!logica para pagar nomina y seguir mostrando detalles
-      $("#pagar_nomina").on('click', function (e) {
+      $("#pagar_nomina").on("click", function (e) {
         Swal.fire({
           title: "Atención",
           text: "¿Está seguro de haber pagado esta nómina?",
@@ -4293,10 +4789,9 @@ $(document).ready(function () {
           confirmButtonColor: "#3085d6", // <- Color del botón de confirmación (opcional)
           cancelButtonColor: "#d33", // <- Color del botón de cancelación (opcional)
           confirmButtonText: "Sí, pagar nomina",
-          cancelButtonText: "Cancelar"
+          cancelButtonText: "Cancelar",
         }).then((result) => {
           if (result.isConfirmed) {
-
             $.ajax({
               url: "../../controller/payrollController.php",
               type: "POST",
@@ -4304,14 +4799,14 @@ $(document).ready(function () {
               dataType: "json",
               data: {
                 function: "pagarNominaEmpleado",
-                datos: datos
+                datos: datos,
               },
               success: function (response) {
                 if (response.success) {
                   Swal.fire({
                     title: "Éxito!",
                     text: response.msg,
-                    icon: "success"
+                    icon: "success",
                   }).then((result) => {
                     location.reload(); // Reload the page
                   });
@@ -4319,7 +4814,7 @@ $(document).ready(function () {
                   Swal.fire({
                     title: "Error",
                     text: response.error,
-                    icon: "error"
+                    icon: "error",
                   });
                 }
               },
@@ -4328,17 +4823,14 @@ $(document).ready(function () {
                 Swal.fire({
                   title: "Error",
                   text: "Ocurrió un error al actualizar el estado de la nómina",
-                  icon: "error"
+                  icon: "error",
                 });
-              }
+              },
             });
-
           }
         });
       });
-
     });
-
   }
   //! FIN NOMINA
 });
